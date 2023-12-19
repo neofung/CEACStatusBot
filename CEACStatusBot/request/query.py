@@ -116,7 +116,7 @@ def query_status(location, application_num, passport_number, surname, captchaHan
         try:
             case_last_updated = soup.find("span", id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblStatusDate").string
         except Exception as ex:
-            print(e)
+            print(ex)
         description = soup.find("span", id="ctl00_ContentPlaceHolder1_ucApplicationStatusView_lblMessage").string
 
         isSuccess = True
